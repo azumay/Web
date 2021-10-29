@@ -132,6 +132,7 @@ session_start();
 
                     <div id="box-actualiza">
                     <p><strong>Auto refresh cada 3s 🔄 </strong> </p>
+                    <br>
                     <a href="E07-Cotitzacions.php">
                     <button id="btn-actualiza">
                    Recargar
