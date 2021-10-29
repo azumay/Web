@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Alatsi|Duru+Sans&display=swap");
+@import url(menu.css);
+@import url(baner.css);
+@import url(servicios.css);
+@font-face {
+  font-family: "Against";
+  src: url("../font/Against.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alatsi", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background: #333;
+  color: #fff;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.contenedor {
+  width: 98%;
+  margin: auto;
+}
+
+h1 {
+  float: left;
+}
+
+header .contenedor {
+  display: table;
+}
+section {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+#bienvenidos {
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px;
+}
+.copy {
+  font-size: 20px;
+}
+.redes {
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+}
+.redes a {
+  color: #333;
+  text-decoration: none;
+}
+
+/*ESTILOS E07- FORM*/
+
+#datosTable {
+  background-color: #fff;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#datosTable td {
+  padding: 0.3em 0.3em;
+  text-align: left;
+  font-size: 16px;
+  border: 1px solid;
+}
+#datosTable th {
+  background-color: #007fa3;
+  color: #fff;
+  border-right: 1px solid #fff;
+  padding: 0.3em 0.3em;
+  border-top: 1px solid #007fa3;
+}
+#datosTable tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+#datosTable td:first-child {
+  width: 100%;
+}
+
+/*ESTILOS PAGINA E07*/
+
+.rojo {
+  transition: 2000ms;
+  background-color: #fe121259;
+  /*border-color: #000000 !important;*/
+}
+.verde {
+  transition: 2000ms;
+  background-color: #2d8e4c6c;
+}
+
+#btn-actualiza {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: #ffffff;
+  color: #528fd5 !important;
+  border-radius: 0.6em;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#btn-actualiza {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+#btn-actualiza:hover {
+  box-shadow: 0 0 40px 40px #007fa3 inset;
+  color: white !important;
+}
+
+#btn-actualiza a {
+  text-decoration: none;
+  color: #000000;
+}

@@ -1,0 +1,44 @@
+#servicios h4 {
+    text-align: center;
+}
+
+#servicios .contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 65%;
+}
+
+#servicios article {
+    margin: 15px;
+}
+
+#servicios img {
+    width: 100%;
+    max-width: 350px;
+}
+
+.boxEjercicios img {
+    transition: border-radius 0.8s;
+}
+
+.boxEjercicios img:hover {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.boxEjercicios h4:hover {
+    color: #528fd5;
+}
+
+.boxEjercicios h4 {
+    font-size: 20px;
+    margin: 10px 0px;
+    transition: color 0.2s;
+    font-weight: bold;
+}
+
+.boxEjercicios a {
+    text-decoration: none;
+    color: #000000;
+}

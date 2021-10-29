@@ -1,0 +1,13 @@
+@media (min-width: 430px) {
+    /* CABECERA PRINCIPAL Y LOGO WEB */
+    #logo img {
+        width: 50%;
+    }
+    #banner h2 {
+        font-size: 30pt;
+    }
+        
+    
+   
+    
+}

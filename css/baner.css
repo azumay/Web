@@ -1,0 +1,48 @@
+
+/* Imortación de fuentes */
+
+
+
+#banner{
+  
+  position: relative;
+  height: 400px;
+
+}
+#banner img{
+  width: 100%;
+  text-align: center;
+  height: 90%;
+}
+
+#banner .contenedor{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+
+}
+
+#banner h2{
+  font-size: 58px;
+  text-align: center;
+}
+
+#banner p{
+ text-align: center;
+  
+  margin-top: 10px;
+  font-size: 32px;
+  
+}
+#banner a:hover{
+  background: #25d366;
+  border-radius: 10px;
+  transform: rotate(360deg);
+}
+
+#logo {
+  text-align: center;
+
+}
