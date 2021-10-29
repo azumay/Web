@@ -297,13 +297,15 @@ foreach ($datos as $clave => $cotis) {
         
         $tdTipo = '<td>';
         $valorCasilla = $valor;
+        $valorViejoInt = floatval($datosViejos[$clave]['ultima_coti']);
+        $valorNuevoInt = floatval($valor);
 
         if ($claveArray == 'ultima_coti') {
 
-            if ($datosViejos[$clave]['ultima_coti'] < $valor) {
+            if ($valorViejoInt < $valorNuevoInt) {
                 $tdTipo = '<td class="rojo">';
 
-            } elseif ($datosViejos[$clave]['ultima_coti'] > $valor) {
+            } elseif ($valorViejoInt > $valorNuevoInt) {
                 $tdTipo = '<td class="verde">';
 
             } 
@@ -312,13 +314,14 @@ foreach ($datos as $clave => $cotis) {
 
         if ($claveArray == 'variacio' || $claveArray == 'variacio_percent') {
 
-            $valorCasilla = str_replace(",", ".", $valor);
+            $valorPunto = str_replace(",", ".", $valor);
+            $valorPunto = floatval($valorPunto);
 
-            if ($valorCasilla < 0) {
+            if ($valorPunto < 0) {
                 $tdTipo = '<td class="rojo">';
 
-            } elseif ($valorCasilla > 0) {
-                $tdTipo = '<td class="negro">';
+            } elseif ($valorPunto > 0) {
+                $tdTipo = '<td class=" verde">';
             } 
         }
 
