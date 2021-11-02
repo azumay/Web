@@ -3,7 +3,7 @@ window.onload = function () {
 
     
 
-        setInterval("location.reload()",3000);
+        setInterval("location.reload()",5000);
     
    
 

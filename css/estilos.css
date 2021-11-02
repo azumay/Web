@@ -101,12 +101,12 @@ footer .contenedor {
 /*ESTILOS PAGINA E07*/
 
 .rojo {
-  transition: 2500ms;
+  transition: 2s;
   background-color: #fe121259;
 
 }
 .verde {
-  transition: 2500ms;
+  transition: 2s;
   background-color: #2d8e4c6c;
 }
 
