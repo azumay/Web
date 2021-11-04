@@ -94,7 +94,17 @@ ini_set("display_errors", 1);
                     </li>
                     <li><a href="#">Productos</a></li>
                     <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Idioma</a>
+                    <div id="boxIdioma">
+                        <ul>
+                                <li><a href=""><img src="img/spain.jpg"> Español</a></li>
+                                <li><a href=""><img src="img/english.jpg"> English</a></li>
+                                <li><a href=""><img src="img/ger.jpg"> Deutsh</a></li>
+                                <li><a href=""><img src="img/fr.jpg"> Français</a></li>
+                            
+                        </ul>
+                    </div>
+                    </li>
                 </ul>
             </nav>
         </section>
@@ -136,7 +146,7 @@ ini_set("display_errors", 1);
                 </a>
             </div>
         </section>
-        
+
         <footer>
   <div class="contenedor">
   <p class="copy">Xavi Yamuza &copy; 2021</p>
