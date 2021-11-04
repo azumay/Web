@@ -2,6 +2,8 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +36,7 @@ ini_set("display_errors", 1);
                     <img src="../img/elefante.png" style="width: 15%;">
                 </div>
                 <h2>M7 - PHP</h2>
-                <p>Desenvolupament web en entorn servidor</p>
+                <p>Desarrollo web en entorno de servidor</p>
             </div>
         </section>
 

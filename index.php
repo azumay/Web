@@ -1,6 +1,7 @@
 <?php
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+
+//Incluyo el documento con las cookies
+include "cookies/idioma.php";
 
 ?>
 
@@ -14,7 +15,7 @@ ini_set("display_errors", 1);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/fontello.css"> 
     <link rel="stylesheet" href="css/baner.css">
     <link rel="stylesheet" href="css/generador-codigo.css">
     <link rel="stylesheet" href="estilos.css">
@@ -37,34 +38,34 @@ ini_set("display_errors", 1);
                     <img src="img/elefante.png" style="width: 15%;">
                 </div>
                 <h2>M7 - PHP</h2>
-                <p>Desenvolupament web en entorn servidor</p>
+                <p><?php echo $titleWeb ?></p>
             </div>
         </section>
 
         <section id="navegador">
             <nav>
                 <ul>
-                    <li><a href="index.php">Inicio</a></li>
-                    <li><a href="#">Ejercicios</a>
+                    <li><a href="index.php"><?php echo $mainHome ?></a></li>
+                    <li><a href="#"><?php echo $mainExercise ?></a>
 
                         <div>
 
                             <ul>
-                                <li class="titulo"><a href=""></a></li>
-                                <li><a href="html/E01-Metodos.php">E01: Mètodes HTML</a></li>
-                                <li><a href="html/E02-Sintaxi-de-variables.php">E02 - Operadors bàsics</a></li>
-                                <li><a href="html/E03-EstructuresControl.php">E03 - Funcions html</a></li>
-                                <li><a href="html/E05-CapturaImatgesExternes.php">E05 - Captura d'imatges externes</a></li>
+                                <li class="titulo lila "><a href=""></a></li>
+                                <li><a href="html/E01-Metodos.php"><?php echo $ejer1 ?></a></li>
+                                <li><a href="html/E02-Sintaxi-de-variables.php"><?php echo $ejer2 ?></a></li>
+                                <li><a href="html/E03-EstructuresControl.php"><?php echo $ejer3 ?></a></li>
+                                <li><a href="html/E05-CapturaImatgesExternes.php"><?php echo $ejer5 ?></a></li>
                             </ul>
 
                             <ul>
-                                <li class="titulo azul"><a href=""></a></li>
-                                <li><a href="html/E06-Webscraping.php">E06 - Web scraping</a></li>
-                                <li><a href="html/E07-Cotitzacions.php">E07-Cotitzacions</a></li>
-                                <li><a href="">Categoria #4</a></li>
-                                <li><a href="">Categoria #5</a></li>
+                                <li class="titulo lila"><a href=""></a></li>
+                                <li><a href="html/E06-Webscraping.php"><?php echo $ejer6 ?></a></li>
+                                <li><a href="html/E07-Cotitzacions.php"><?php echo $ejer7 ?></a></li>
+                                <li><a href=""><?php echo $soon ?></a></li>
+                                <li><a href=""><?php echo $soon ?></a></li>
                             </ul>
-
+<!--
                             <ul>
                                 <li class="titulo verde"><a href="">Categoria #1</a></li>
                                 <li><a href="">Categoria #2</a></li>
@@ -72,6 +73,7 @@ ini_set("display_errors", 1);
                                 <li><a href="">Categoria #4</a></li>
                                 <li><a href="">Categoria #5</a></li>
                             </ul>
+-->
                             <!--
             <ul>
               <li class="titulo rojo"><a href="">Categoria #1</a></li>
@@ -92,16 +94,17 @@ ini_set("display_errors", 1);
                         </div>
 
                     </li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Idioma</a>
+                    <li><a href="#"><?php echo $mainProducts ?></a></li>
+                    <li><a href="#"><?php echo $mainAbout ?></a></li>
+                    <li><a href="#"><?php echo $mainLanguage ?></a>
                     <div id="boxIdioma">
                         <ul>
-                                <li><a href=""><img src="img/spain.jpg"> Español</a></li>
-                                <li><a href=""><img src="img/english.jpg"> English</a></li>
-                                <li><a href=""><img src="img/ger.jpg"> Deutsh</a></li>
-                                <li><a href=""><img src="img/fr.jpg"> Français</a></li>
-                            
+                                <li><a href="?lang=es"><img src="img/flag/spain.jpg"> Español</a></li>
+                                <li><a href="?lang=cat"><img src="img/flag/cat.jpg"> Catalan</a></li>
+                                <li><a href="?lang=en"><img src="img/flag/english.jpg"> English</a></li>
+                                <li><a href="?lang=ger"><img src="img/flag/ger.jpg"> Deutsh</a></li>
+                                <li><a href="?lang=fr"><img src="img/flag/fr.jpg"> Français</a></li>
+
                         </ul>
                     </div>
                     </li>
@@ -117,31 +120,31 @@ ini_set("display_errors", 1);
                 <a href="html/E02-Sintaxi-de-variables.php">
                     <article>
                         <img src="img/e01.png">
-                        <h4 class="titulo-ejercicio">E02 Sintaxi de variables</h4>
+                        <h4 class="titulo-ejercicio"><?php echo $e02 ?></h4>
                     </article>
                 </a>
                 <a href="html/E03-EstructuresControl.php">
                     <article>
                         <img src="img/eo3.png">
-                        <h4 class="titulo-ejercicio">E03 - Funcions html</h4>
+                        <h4 class="titulo-ejercicio"><?php echo $e03 ?></h4>
                     </article>
                 </a>
                 <a href="html/E05-CapturaImatgesExternes.php">
                     <article>
                         <img src="img/eo5.png">
-                        <h4 class="titulo-ejercicio">E05 - Captura d'imatges externes</h4>
+                        <h4 class="titulo-ejercicio"><?php echo $e05 ?></h4>
                     </article>
                 </a>
                 <a href="html/E06-Webscraping.php">
                     <article>
                         <img src="img/e06-scraping.png">
-                        <h4 class="titulo-ejercicio">E06 - Web scraping</h4>
+                        <h4 class="titulo-ejercicio"><?php echo $e06 ?></h4>
                     </article>
                 </a>
                 <a href="html/E07-Cotitzacions.php">
                     <article>
                         <img src="img/e07.png">
-                        <h4 class="titulo-ejercicio">E07-Cotitzacions</h4>
+                        <h4 class="titulo-ejercicio"><?php echo $e07 ?></h4>
                     </article>
                 </a>
             </div>

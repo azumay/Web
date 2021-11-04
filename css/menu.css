@@ -12,6 +12,7 @@ nav ul {
 }
 nav > ul > li {
   float: left;
+  width: 120px;
 }
 
 nav ul li a {
@@ -41,7 +42,7 @@ nav ul li div {
 
 nav ul li #boxIdioma {
   width: 20% !important;
-  left: 442px !important;
+left: 39% !important;
 }
 
 nav ul li div ul {
@@ -73,6 +74,9 @@ nav ul li div ul .titulo a {
 }
 .titulo.naranja {
   background: #e67e22;
+}
+.titulo.lila {
+  background: #302e6d;
 }
 .titulo.rojo {
   background: #c0392b;

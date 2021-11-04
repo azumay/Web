@@ -14,7 +14,8 @@
 }
 
 body {
-  font-family: "Alatsi", sans-serif;
+  font-family: "Duru Sans", sans-serif;
+    background-image: url(../img/pattern.svg);
 }
 
 header {

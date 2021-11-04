@@ -12,12 +12,12 @@ ini_set("display_errors", 1);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/fontello.css">
+    
     <link rel="stylesheet" href="../css/baner.css">
     <link rel="stylesheet" href="../css/generador-codigo.css">
     <link rel="stylesheet" href="../css/estilos_E03.css">
     <link rel="stylesheet" href="../css/estilos_E05.css">
-    <link rel="stylesheet" href="../estilos.css">
+   
 
     <title>Xavi Yamuza - M7</title>
 </head>
