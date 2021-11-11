@@ -28,5 +28,6 @@ $e03 = "E03 - Funciones HTML";
 $e05 = "E05 - Captura de imagenes externas";
 $e06 = "E06 - Web scraping";
 $e07 = "E07 - Cotizaciones";
+$e09 = "E09 - Formulario de contacto";
 
 ?>

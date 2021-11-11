@@ -75,9 +75,10 @@ session_start();
                                 <li class="titulo azul"><a href=""></a></li>
                                 <li><a href="E06-Webscraping.php">E06 - Web scraping</a></li>
                                 <li><a href="E07-Cotitzacions.php">E07-Cotitzacions</a></li>
-                                <li><a href="">Categoria #4</a></li>
-                                <li><a href="">Categoria #5</a></li>
+                                <li><a href="E09-Formulari.php">E09 - Formulari de contacte</a></li>
+                                <li><a href="">Proximamente...</a></li>
                             </ul>
+  <!--
 
                             <ul>
                                 <li class="titulo verde"><a href="">Categoria #1</a></li>

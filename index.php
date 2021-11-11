@@ -62,7 +62,7 @@ include "cookies/idioma.php";
                                 <li class="titulo lila"><a href=""></a></li>
                                 <li><a href="html/E06-Webscraping.php"><?php echo $ejer6 ?></a></li>
                                 <li><a href="html/E07-Cotitzacions.php"><?php echo $ejer7 ?></a></li>
-                                <li><a href=""><?php echo $soon ?></a></li>
+                                <li><a href="html/E09-Formulari.php">E09 - Formulari de contacte</a></li>
                                 <li><a href=""><?php echo $soon ?></a></li>
                             </ul>
 <!--
@@ -95,7 +95,7 @@ include "cookies/idioma.php";
 
                     </li>
                     <li><a href="#"><?php echo $mainProducts ?></a></li>
-                    <li><a href="#"><?php echo $mainAbout ?></a></li>
+                    <li><a href="html/E09-Formulari.php"><?php echo $mainAbout ?></a></li>
                     <li><a href="#"><?php echo $mainLanguage ?></a>
                     <div id="boxIdioma">
                         <ul>
@@ -145,6 +145,12 @@ include "cookies/idioma.php";
                     <article>
                         <img src="img/e07.png">
                         <h4 class="titulo-ejercicio"><?php echo $e07 ?></h4>
+                    </article>
+                </a>
+                <a href="html/E09-Formulari.php">
+                    <article>
+                        <img src="img/e09.png">
+                        <h4 class="titulo-ejercicio"><?php echo $e09 ?></h4>
                     </article>
                 </a>
             </div>
