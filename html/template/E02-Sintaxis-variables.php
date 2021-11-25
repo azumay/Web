@@ -17,7 +17,6 @@
 
             <?php
 
-
 $numeros = range(0, 9);
 $caracteres = range('A', 'Z');
 
@@ -25,14 +24,14 @@ $fusionArrays = array_merge($numeros, $caracteres);
 $resultado = array();
 
 if ($_POST) {
-for ($x = 0; $x <= 5; $x++) {
-$pos = rand(0, 35);
-array_push($resultado, $fusionArrays[$pos]);
-}
+    for ($x = 0; $x <= 5; $x++) {
+        $pos = rand(0, 35);
+        array_push($resultado, $fusionArrays[$pos]);
+    }
 }
 
 foreach ($resultado as $cadena) {
-echo $cadena;
+    echo $cadena;
 }
 
 ?>
@@ -40,12 +39,14 @@ echo $cadena;
 
         </p>
         <div id="caja-buton-pass">
-            <button name="boton" formaction="?ph=E02-Sintaxis-variables">
 
+        <a href="?ph=E02-Sintaxis-variables">
+            <button id="btn-actualiza">
                 Generar
                 <span id="candado"> <img src="/Web/img/contrasena.png"></span>
-
             </button>
+        </a
+
         </div>
     </div>
 </form>

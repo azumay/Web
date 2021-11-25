@@ -11,7 +11,7 @@ if (isset($_GET["lang"])) {
     setcookie('idioma', $webLang, $caducidad);
 }
 //Si no hay nada en la URL comprobamos si tenemos una cookie
- elseif ( $_COOKIE["idioma"]) {
+ elseif (isset($_COOKIE["idioma"])) {
     $webLang = $_COOKIE["idioma"];
     $caducidad = time() + 86400;
     setcookie('idioma', $webLang, $caducidad);

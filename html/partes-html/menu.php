@@ -5,7 +5,7 @@
 
             <div class="contenedor">
                 <div id="logo">
-                    <img src="img/elefante.png" style="width: 15%;">
+                    <a href="?ph=home"><img src="img/elefante.png" style="width: 15%;"></a>
                 </div>
                 <h2>M7 - PHP</h2>
                 <p><?php echo $titleWeb ?></p>

@@ -1,7 +1,10 @@
 
 /* Imortación de fuentes */
 
-
+#logo a{
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
 
 #banner{
   
@@ -36,11 +39,7 @@
   font-size: 32px;
   
 }
-#banner a:hover{
-  background: #25d366;
-  border-radius: 10px;
-  transform: rotate(360deg);
-}
+
 
 #logo {
   text-align: center;

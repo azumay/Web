@@ -19,8 +19,11 @@
     <!--Script para obtener iconos footer -->
       <script src="https://kit.fontawesome.com/9d7641bf78.js" crossorigin="anonymous"></script>
 
+ 
     <!--Script para efecto formulario registro -->
-    <script src="/Web/script/form-registre.js"></script>
+    <script src="script/form-registre.js"></script>
+
+   
 
     <title>Xavi Yamuza - M7</title>
 </head>

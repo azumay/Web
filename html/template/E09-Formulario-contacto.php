@@ -24,7 +24,7 @@ function filtroForm($datos)
     return $newstr;
 }
 
-if (isset($_POST["submit"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST["submitContacto"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($_POST["nombre"])) {
         $errorCampo[] = "❌ El nombre es obligatorio";
@@ -164,7 +164,7 @@ if (isset($errorCampo)) {
                 </ul>
                 <li class="buttons">
 
-                    <input type="submit" name="submit" value="Enviar">
+                    <input type="submit" name="submitContacto" value="Enviar">
                 </li>
             </ul>
     </form>

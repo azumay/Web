@@ -29,15 +29,20 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $pagina = $_GET["ph"];
 
         include "html/template/" . $pagina . ".php";
-    } else {
+    } 
+    else {
 
         include "html/template/home.php";
     }
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["submit"])) {
+    
+    if (isset($_POST["submitContacto"])) {
         include "html/template/E09-Formulario-contacto.php";
+    }
+    elseif(isset($_POST["submitRegistro"])){
+        include "html/template/E02-Formulario-registro.php";
     }
 
 }
