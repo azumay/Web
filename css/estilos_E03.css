@@ -1,0 +1,61 @@
+/* ESTILOS GENERALES PARA EL DIV PRINCIPAL */
+#box_E03 {
+  width: 100%;
+  margin: -40px auto;
+  text-align: center;
+  padding: 30px;
+}
+
+/* ESTILOS BOX <CODE> */
+#code {
+  width: 80%;
+  height: 140px;
+  background: black;
+  color: #2af49a;
+  font-weight: bold;
+}
+
+/* ESTILOS 1R DIV EJERCICIO 1*/
+
+#html_generateSelect {
+  background: #63B4B870;;
+  border-radius: 20px;
+  height: 150px;
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* ESTILOS 2N DIV EJERCICIO 2 */
+
+#html_generateCheckBox {
+  background: #F0A50066;
+  border-radius: 20px;
+  height: 150px;
+  padding: 10px;
+  width: 50%;
+  margin: 30px auto;
+}
+
+/*ESTILOS SELECT */
+#html_generateSelect select {
+  margin-top: 10px;
+  width: 40%;
+  cursor: pointer;
+  padding: 7px 10px;
+  height: 42px;
+  outline: 0;
+  background: #f0f0f0;
+  font-size: 1em;
+  color: #999;
+  font-family: "Quicksand", sans-serif;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+#html_generateSelect select:hover {
+  background: #664e887a;
+  color: white;
+}

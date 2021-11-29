@@ -1,0 +1,175 @@
+#sexo div {
+  width: 50%;
+  float: right;
+  color: #646363;
+  font-size: 14px;
+}
+#boxErrores {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+  text-align: left;
+}
+#boxSuccess {
+  color: #155724;
+  background-color: #d4edda;
+  padding: 30px;
+  transition: all 3s;
+  border-color: #c3e6cb;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contenedorForm {
+  position: relative;
+  width: 100%;
+  height: 903px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.contenedorForm .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.contenedorForm .user .imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.contenedorForm .user .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contenedorForm .user .formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+.contenedorForm .user .formBx form h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.contenedorForm .user .formBx form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.contenedorForm .user .formBx form input[type="submit"] {
+  max-width: 120px;
+  text-align: center;
+  background: #677eff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.contenedorForm .user .formBx form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.contenedorForm .user .formBx form .signup a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
+}
+
+.contenedorForm .signupBx {
+  pointer-events: none;
+}
+
+.contenedorForm.active .signupBx {
+  pointer-events: initial;
+}
+
+.contenedorForm .signupBx .formBx {
+  left: 100%;
+}
+
+.contenedorForm.active .signupBx .formBx {
+  left: 0;
+}
+
+.contenedorForm .signupBx .imgBx {
+  left: -100%;
+}
+
+.contenedorForm.active .signupBx .imgBx {
+  left: 0%;
+}
+
+.contenedorForm .signinBx .formBx {
+  left: 0%;
+}
+
+.contenedorForm.active .signinBx .formBx {
+  left: 100%;
+}
+
+.contenedorForm .signinBx .imgBx {
+  left: 0%;
+}
+
+.contenedorForm.active .signinBx .imgBx {
+  left: -100%;
+}
+
+@media (max-width: 991px) {
+  .contenedorForm {
+    max-width: 400px;
+  }
+
+  .contenedorForm .imgBx {
+    display: none;
+  }
+
+  .contenedorForm .user .formBx {
+    width: 100%;
+  }
+}

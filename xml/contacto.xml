@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datos>
+ 
+
+
+<contacto>
+<fecha>25-11-2021</fecha>
+<nombre>javier</nombre>
+<email>xyamuza@gmail.com</email>
+<mensaje>sdfsdf</mensaje>
+</contacto>
+<contacto>
+<fecha>25-11-2021</fecha>
+<nombre>josefa</nombre>
+<email>alfrtedo@gmail.com</email>
+<mensaje>sdfsdf</mensaje>
+</contacto>
+<contacto>
+<fecha>28-11-2021</fecha>
+<nombre>Fran</nombre>
+<email>azumay@gmail.com</email>
+<mensaje>Hola esto es una prueba!</mensaje>
+</contacto>
+</datos>
