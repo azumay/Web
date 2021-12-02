@@ -4,7 +4,7 @@ session_start();
 //Incluyo el documento con las cookies
 include "cookies/idioma.php";
 
-/* *Prueba
+/* 
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 */
@@ -22,6 +22,7 @@ include "html/partes-html/head.php";
     <?php
 
 include "html/partes-html/menu.php";
+include "html/funcionesPHP/conexionDB.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 

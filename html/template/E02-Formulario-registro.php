@@ -48,19 +48,28 @@ if (isset($errorCampo)) {
             <div class="user signupBx">
               <div class="formBx">
 
-
+              
 
                 <form method="post" action="<?php
 echo htmlspecialchars($_SERVER['PHP_SELF'] . "?ph=E02-Formulario-registro");
-?>">
+?>" enctype="multipart/form-data">
                   <h2>Crear cuenta</h2>
+                  <?php echo $_FILES['imgPerfil']['error'];
+                        echo $_FILES['imgPerfil']['type'];
+                        
+                        
 
+                        ?>
                   <input type="text" name="usuario" placeholder="@Username*"  value=<?php
 if ((isset($_POST["usuario"]))) {
   echo filtroForm($_POST["usuario"]);
 }
 ?>>
-                  <input type="password" name="password" placeholder="Contraseña*">
+                  <input type="password" name="password" placeholder="Contraseña*" value=<?php
+if ((isset($_POST["password"]))) {
+  echo filtroForm($_POST["password"]);
+}
+?>>
                   <div id="sexo">
                     <p>Sexo*:</p>
                     <div>
@@ -125,7 +134,7 @@ if ((isset($_POST["telefono"]))) {
   echo (filtroForm($_POST["telefono"]));
 }
 ?>>
-
+<input type="file" name="imgPerfil" >
 
                   <input type="submit" name="submitRegistro" value="Crear Cuenta">
                   <p class="signup">

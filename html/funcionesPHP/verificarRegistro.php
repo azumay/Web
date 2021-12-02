@@ -44,6 +44,7 @@ if (isset($_POST["submitRegistro"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     filtroForm($_POST["telefono"]);
 
 
+
     //Control campo USERNAME
     if (empty($_POST["usuario"])) {
         $errorCampo[] = "⚠️ El nombre de USUARIO es obligatorio";
@@ -127,6 +128,19 @@ if (isset($_POST["submitRegistro"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    //Control campo FILE
+    if($_FILES['imgPerfil']['name'] == null ){
+        $errorCampo[] = "⚠️ Debes subir una imagen de perfil";
+    }else{
+
+        if($_FILES['imgPerfil']['size'] > 2097152 ){
+            $errorCampo[] = "⚠️ La imagen tiene que tener un tamaño máximo 2 Mb";
+        }
+        if($_FILES['imgPerfil']['type'] != "image/jpeg" ){
+            $errorCampo[] = "⚠️ Formato de imagen no soportado";
+        }
+    }
+
 
     if (empty($errorCampo)) { //Una vez no hay errores...
 
@@ -143,6 +157,7 @@ if (isset($_POST["submitRegistro"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
         $telefono = filtroForm($_POST["telefono"]);
         $sexo = $_POST['sexo'];
         $fechaNacimiento = $_POST["fechaNacimiento"];
+        
 
 
         //Borro los valores introducidos en los inputs
