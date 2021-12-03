@@ -4,10 +4,10 @@ session_start();
 //Incluyo el documento con las cookies
 include "cookies/idioma.php";
 
-/* 
+ 
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-*/
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,10 @@ include "html/partes-html/head.php";
     <?php
 
 include "html/partes-html/menu.php";
-include "html/funcionesPHP/conexionDB.php";
+
+/* Fichero para confirmar que hay conexion con la base de datos*/
+
+//include "html/funcionesPHP/conexionDB.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 

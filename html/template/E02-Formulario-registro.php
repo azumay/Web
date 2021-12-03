@@ -15,9 +15,9 @@ if (isset($errorCampo)) {
     }
 } else if (!isset($errorCampo) && $_SERVER["REQUEST_METHOD"] == "POST") {
   
-  echo "<meta http-equiv='refresh' content='0;url=?ph=registroSucces'>";
+  //echo "<meta http-equiv='refresh' content='0;url=?ph=registroSucces'>";
  // header('Location: registroSucces.php'); //Con esto me petaba pero mi intención era hacerlo con el header
-   exit();
+  // exit();
 
     //COMPROVACION DE CAMPOS:
     //echo $usuario . " " . $dni . " " . $nombre . " " . $apellidos;
@@ -54,10 +54,14 @@ if (isset($errorCampo)) {
 echo htmlspecialchars($_SERVER['PHP_SELF'] . "?ph=E02-Formulario-registro");
 ?>" enctype="multipart/form-data">
                   <h2>Crear cuenta</h2>
-                  <?php echo $_FILES['imgPerfil']['error'];
-                        echo $_FILES['imgPerfil']['type'];
-                        
-                        
+                 
+                 <?php 
+                 
+                 /*Pruebas*/
+                        //echo $_FILES['imgPerfil']['error'];
+                        //echo $_FILES['imgPerfil']['type'];
+                        //echo image_type_to_extension($_FILES['imgPerfil']['name'][2]);
+                     
 
                         ?>
                   <input type="text" name="usuario" placeholder="@Username*"  value=<?php

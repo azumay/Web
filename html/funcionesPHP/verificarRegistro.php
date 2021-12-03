@@ -1,5 +1,5 @@
 <?php
-global $sexo ;
+global $sexo;
 $telefono = "";
 $cp = "";
 function filtroForm($datos)
@@ -13,8 +13,8 @@ function filtroForm($datos)
     return $newstr; //Devuelvo el dato limpio
 }
 
-
 function dni($dni) //Funcion para verificar los dni
+
 {
     $letra = substr($dni, -1);
     $numeros = substr($dni, 0, -1);
@@ -26,24 +26,21 @@ function dni($dni) //Funcion para verificar los dni
     }
 }
 
-
 if (isset($_POST["submitRegistro"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Limpiamos los valores
     filtroForm($_POST["usuario"]);
     filtroForm($_POST["password"]);
-    
+
     filtroForm($_POST["dni"]);
     filtroForm($_POST["nombre"]);
     filtroForm($_POST["apellidos"]);
-    
+
     filtroForm($_POST["direccion"]);
     filtroForm($_POST["cp"]);
     filtroForm($_POST["poblacion"]);
     filtroForm($_POST["provincia"]);
     filtroForm($_POST["telefono"]);
-
-
 
     //Control campo USERNAME
     if (empty($_POST["usuario"])) {
@@ -54,7 +51,7 @@ if (isset($_POST["submitRegistro"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["password"])) {
         $errorCampo[] = "⚠️ La CONTRASEÑA es obligatoria";
     } else {
-        if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{6,12}$/', $_POST["password"])){
+        if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{6,12}$/', $_POST["password"])) {
             $errorCampo[] = "⚠️ La CONTRASEÑA es poco segura";
         }
     }
@@ -129,18 +126,19 @@ if (isset($_POST["submitRegistro"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     //Control campo FILE
-    if($_FILES['imgPerfil']['name'] == null ){
+    /*if ($_FILES['imgPerfil']['name'] == null) {
         $errorCampo[] = "⚠️ Debes subir una imagen de perfil";
-    }else{
+    } else {
 
-        if($_FILES['imgPerfil']['size'] > 2097152 ){
+        if ($_FILES['imgPerfil']['size'] > 2097152) {
             $errorCampo[] = "⚠️ La imagen tiene que tener un tamaño máximo 2 Mb";
         }
-        if($_FILES['imgPerfil']['type'] != "image/jpeg" ){
+        if ($_FILES['imgPerfil']['type'] != "image/jpeg") {
             $errorCampo[] = "⚠️ Formato de imagen no soportado";
         }
-    }
-
+       
+        
+    }*/
 
     if (empty($errorCampo)) { //Una vez no hay errores...
 
@@ -158,11 +156,25 @@ if (isset($_POST["submitRegistro"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
         $sexo = $_POST['sexo'];
         $fechaNacimiento = $_POST["fechaNacimiento"];
         
+        //Tratamiento IMG
+        
+        $imgTempName = $_FILES['imgPerfil']['tmp_name'];
+
+        $target_path= $_SERVER['DOCUMENT_ROOT']."/Web/uploads/";
+        
+        $target_path = $target_path . date('d-m-Y_h:i:s_') . $_FILES['imgPerfil']['name'];
+
+        move_uploaded_file($imgTempName, $target_path );
+
+        //Conexion Base de datos
+
+        include "conexionDB.php";
+
+        
 
 
         //Borro los valores introducidos en los inputs
         unset($_POST["nombre"], $_POST["apellidos"], $_POST["dni"], $_POST['sexo'], $_POST["fechaNacimiento"], $_POST["usuario"], $_POST["password"], $_POST["radio"], $_POST["direccion"], $_POST["cp"], $_POST["poblacion"], $_POST["provincia"], $_POST["telefono"]);
-    
-        
+
     }
 }
