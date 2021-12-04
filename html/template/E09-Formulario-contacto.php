@@ -15,14 +15,8 @@
     </div>
     <?php
 
-//Filtro comun para los campos del formulario
-function filtroForm($datos)
-{
-    $newstr = trim($datos); //Elimino posibles espacios
-    $newstr = htmlspecialchars($datos); //Traduzco caracteres especiales en HTML
-    $newstr = filter_var($datos, FILTER_SANITIZE_STRING); //elimina caracteres no deseados o codificados
-    return $newstr;
-}
+    include "/Web/html/funcionesPHP/funciones.php"; //Importo funciones php
+
 
 if (isset($_POST["submitContacto"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 

@@ -4,6 +4,9 @@ const toggleForm = () => {
   };
 
   
+
+ 
+
 /*
   setTimeout(function () {
     var boxRegistro = document.getElementById("boxSuccess");

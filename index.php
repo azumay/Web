@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         include "html/template/E09-Formulario-contacto.php";
     }
     elseif(isset($_POST["submitRegistro"])){
+        
         include "html/template/E02-Formulario-registro.php";
     }
 
