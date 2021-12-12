@@ -8,14 +8,18 @@
   <div class='container'>
 
 <?php
-include "html/funcionesPHP/verificarRegistro.php";
+
+
 echo "<img src='img/success.gif'>";
 echo "<div id='boxSuccess'><p>Tu cuenta se ha creado correctamente ✅</p></div>  ";
-echo "<a href='?ph=home'>Volver al Inicio</a>";
-
 
 
 ?>
+
+<p>Para verificar tu cuenta deberes clicar al siguiente enlance:</p>
+ <a href="?ph=../funcionesPHP/cuentaVerificada&last_user=<?php echo $ultimoRegistro = mysqli_insert_id($usrGenerico); ?>">Verificar</a>
+
+
 
 </div>
           </div>

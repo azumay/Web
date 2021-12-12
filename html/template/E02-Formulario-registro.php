@@ -19,7 +19,7 @@ if (isset($errorCampo)) {
     }
 } else if (!isset($errorCampo) && $_SERVER["REQUEST_METHOD"] == "POST") {
 
-    echo "<meta http-equiv='refresh' content='0;url=?ph=registroSucces'>";
+    //echo "<meta http-equiv='refresh' content='0;url=?ph=registroSucces'>";
     // header('Location: registroSucces.php'); //Con esto me petaba pero mi intención era hacerlo con el header
     // exit();
 
@@ -64,6 +64,7 @@ echo htmlspecialchars($_SERVER['PHP_SELF'] . "?ph=E02-Formulario-registro");
 
 /*Pruebas*/
 
+
 //echo $_FILES['imgPerfil']['type'];
 //echo image_type_to_extension($_FILES['imgPerfil']['name'][2]);
 
@@ -97,6 +98,18 @@ if ($sexo == "femenino") {
 ?>>Femenino</input>
                     </div>
                   </div>
+
+  <select name="tipoDocumento">
+    <option value="Pasaporte" <?php if(isset($_POST["tipoDocumento"])=="Pasaporte"){echo 'selected="selected"';}?>>
+      Pasaporte
+    </option>
+    
+    <option value="NIF" <?php if(isset($_POST["tipoDocumento"])=="NIF"){echo 'selected="selected"';}?>>
+    NIF
+    </option>
+  </select>
+
+  <br>
                   <input type="text" name="dni" placeholder="DNI*" value=<?php
 if ((isset($_POST["dni"]))) {
     echo filtroForm($_POST["dni"]);
@@ -122,7 +135,7 @@ if ((isset($_POST["fechaNacimiento"]))) {
 ?>>
 
                   <input type="text" name="direccion" placeholder="Dirección" value=<?php
-if ((isset($_POST["direccion"]))) {
+if (isset($_POST["direccion"])) {
     echo (filtroForm($_POST["direccion"]));
 }
 ?>>

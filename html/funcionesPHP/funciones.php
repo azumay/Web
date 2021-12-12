@@ -5,13 +5,11 @@ $telefono = "";
 $cp = "";
 function filtroForm($datos) //Funcion para filtrar datos Formulario
 {
-    $newstr = trim($datos); //Elimino posibles espacios
-    $newstr = htmlspecialchars($datos); //Traduzco caracteres especiales en HTML
-    $newstr = filter_var($datos, FILTER_SANITIZE_STRING); //Filtra una variable con el filtro de mail
-    $newstr = strip_tags($datos); //Retira las etiquetas HTML y PHP de un string
-    $newstr = stripslashes($datos); //Quita las barras de un string con comillas escapadas
+    $datos = trim($datos); //Elimino posibles espacios
+    $datos = strip_tags($datos); //Retira las etiquetas HTML y PHP de un string
+    $datos = stripslashes($datos); //Quita las barras de un string con comillas escapadas
 
-    return $newstr; //Devuelvo el dato limpio
+    return $datos; //Devuelvo el dato limpio
 }
 
 function getPlatform($user_agent) //Funcion para obtener Sistema Operativo

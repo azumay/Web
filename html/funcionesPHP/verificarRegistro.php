@@ -127,6 +127,7 @@ if (isset($_POST["submitRegistro"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
         $mail = filtroForm($_POST["mail"]);
         $contraseña = filtroForm($_POST["password"]);
         $sexo = substr($_POST['sexo'], 0, 1); //Obtengo solo la 1r letra
+        $tipoDocumento = $_POST["tipoDocumento"];
         $dni = filtroForm($_POST["dni"]);
         $nombre = filtroForm($_POST["nombre"]);
         $apellidos = filtroForm($_POST["apellidos"]);
