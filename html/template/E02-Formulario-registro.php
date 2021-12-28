@@ -1,8 +1,11 @@
+
+
 <style>
   #banner {
     display: none;
   }
 </style>
+
 <section id="box-form">
 
   <div id="caja-generador">
@@ -37,12 +40,21 @@ if (isset($errorCampo)) {
             <div class="user signinBx">
               <div class="imgBx"><img src="img/img-inicio-sesion.jpg" alt="" /></div>
               <div class="formBx">
-                <form action="" onsubmit="return false;">
+                <form action="<?php
+echo htmlspecialchars($_SERVER['PHP_SELF']);
+?>"  method="post">
                 <a href="?ph=home"><img src="/Web/img/robot.png" id="robotRegistro"/></a>
                   <h2>Iniciar sesión</h2>
-                  <input type="text" name="" placeholder="@Usuario" />
-                  <input type="password" name="" placeholder="Contraseña" />
-                  <input type="submit" name="" value="Entrar" />
+             <?php 
+             if (!empty($message)){
+               echo '<p>'.$message.'</p>';
+             } 
+             ?>
+    
+
+                  <input type="text" name="email" placeholder="@Usuario" />
+                  <input type="password" name="passwd" placeholder="Contraseña" />
+                  <input type="submit" name="login" value="Entrar" />
                   <p class="signup">
                     ¿Eres nuevo aquí?<br>
                     <a href="#" onclick="toggleForm();">Registrate.</a>
@@ -63,7 +75,6 @@ echo htmlspecialchars($_SERVER['PHP_SELF'] . "?ph=E02-Formulario-registro");
                  <?php
 
 /*Pruebas*/
-
 
 //echo $_FILES['imgPerfil']['type'];
 //echo image_type_to_extension($_FILES['imgPerfil']['name'][2]);
@@ -100,11 +111,11 @@ if ($sexo == "femenino") {
                   </div>
 
   <select name="tipoDocumento">
-    <option value="Pasaporte" <?php if(isset($_POST["tipoDocumento"])=="Pasaporte"){echo 'selected="selected"';}?>>
+    <option value="Pasaporte" <?php if (isset($_POST["tipoDocumento"]) == "Pasaporte") {echo 'selected="selected"';}?>>
       Pasaporte
     </option>
-    
-    <option value="NIF" <?php if(isset($_POST["tipoDocumento"])=="NIF"){echo 'selected="selected"';}?>>
+
+    <option value="NIF" <?php if (isset($_POST["tipoDocumento"]) == "NIF") {echo 'selected="selected"';}?>>
     NIF
     </option>
   </select>

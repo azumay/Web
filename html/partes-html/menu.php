@@ -9,6 +9,36 @@
                 </div>
                 <h2>M7 - PHP</h2>
                 <p><?php echo $titleWeb ?></p>
+    <?php 
+    if(!empty($user)){
+        $mail_usuario = $user['email'];
+        $img_user = $user['imatge'];
+        $img_user = substr($img_user, 18);
+        
+        echo "<ul id='account-user'>
+            <li> 
+            
+                <img src='$img_user' style='width: 90px;'>
+          </li>
+           <li>
+                <p>$mail_usuario</p> 
+         
+            </li>
+            <li>
+                <p>
+                    <img id='logout' src='/Web/img/cerrar-sesion.png'>
+                    <a href='?cerrar_sesion'>
+                        Logout
+                    </a>
+                </p>
+            </li>
+            
+         </ul>";
+
+     
+    }
+    ?>
+      
             </div>
     </section>
 

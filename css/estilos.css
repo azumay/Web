@@ -6,7 +6,58 @@
   font-family: "Against";
   src: url("../font/Against.woff");
 }
+/*ESTILOS MENSAJE DE PAGINA SIN PERMISOS*/
 
+#alert-permisos{
+  text-align: center; 
+  width: 25%; 
+  margin: 10px auto;
+}
+
+#alert-permisos h2{
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+
+}
+
+
+
+
+/*ESTILOS BOX LOGEADO USER*/
+#account-user{
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  width: 50%;
+  max-width: 1000px;
+  margin: auto;
+}
+#account-user li{
+  padding: 20px;
+  display: inline-block;
+ 
+}
+
+#account-user img{
+  width: 50px !important;
+  height: 50px !important;
+}
+
+#account-user p{
+  font-size: 20px !important;
+}
+#account-user a{
+  color: #f6535d;
+  text-decoration: none;
+}
+#account-user p #logout{
+  width: 15px !important;
+  height: 15px !important;
+}
+
+
+/*ESTILOS GENERALES*/
 * {
   margin: 0;
   padding: 0;
