@@ -21,6 +21,7 @@
                 <img src='$img_user' style='width: 90px;'>
           </li>
            <li>
+                <span id='online'> </span><span> Online</span>
                 <p>$mail_usuario</p> 
          
             </li>
@@ -98,7 +99,23 @@
 
                     </li>
                     <li><a href="#"><?php echo $mainProducts ?></a></li>
-                    <li><a href="?ph=E02-Formulario-registro">Login🔐</a></li>
+                    <li>
+                        <?php
+                    if (isset($_SESSION['user_id'])) {
+                        echo  "
+                        
+                        <a href='?user'>👤 Perfil</a>
+                       
+                            
+                        
+                    "; 
+                    }
+                   else{
+                    echo  "<a href='?ph=E02-Formulario-registro'>Login🔐</a>";
+                   }    
+                    
+                    ?>
+                    </li>
                     <li><a href="#"><?php echo $mainLanguage ?></a>
                     <div id="boxIdioma">
                         <ul>

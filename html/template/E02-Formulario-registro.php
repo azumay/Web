@@ -1,5 +1,14 @@
+<?php
+if (isset($_SESSION['user_id'])){
+   
+  //header('Location: http://localhost/Web/index.php');
 
 
+  echo '<meta http-equiv="refresh"
+        content="0; url=http://localhost/Web/index.php?user">';
+
+}
+?>
 <style>
   #banner {
     display: none;

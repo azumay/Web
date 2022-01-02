@@ -56,7 +56,54 @@
   height: 15px !important;
 }
 
+#online{
+  background-color: green;
+  border-radius: 100%;
+  width: 0.8rem;
+  height: 0.8rem;
+  display: inline-block;
+  
+}
+/*PAGINA PROFILE USER*/
 
+#boxProfile{
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 25px;
+  text-align: center;
+}
+
+#imgProfile{
+  margin: 0 auto;
+  border: 5px solid #50597b;
+  width: 200px;
+  border-radius: 100%;
+  height: 200px;
+}
+#boxDatosUsuario{
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 1.25rem;
+  width: 50%;
+  background: #1f253dbd;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 5px;
+  color: white;
+}
+#boxDatosUsuario dt{
+  font-weight: 700;
+}
+#boxDatosUsuario p{
+  color: #11a8ab;
+  font-size: 1.5em;
+  
+}
+#boxDatosUsuario div:nth-child(1){
+  padding: 4px 16px;
+  background-color: rgb(49, 52, 62);
+  line-height: 1.15;
+}
 /*ESTILOS GENERALES*/
 * {
   margin: 0;

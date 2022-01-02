@@ -4,7 +4,7 @@ include 'dateBase.php';
 
 if (!empty($_POST['email']) && !empty($_POST['passwd'])) {
 
-    $records = $conn->prepare('SELECT id, email, password FROM tbl_usuaris WHERE email = :email');
+    $records = $conn->prepare('SELECT * FROM tbl_usuaris WHERE email = :email');
     $records->bindParam(':email', $_POST['email']);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
