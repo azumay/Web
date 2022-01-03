@@ -22,7 +22,8 @@ if (isset($_SESSION['user_id'])){
 
     <div class='container'>
     <?php
-
+$loginFail = false;
+$mensaje= "Contraseña o mail incorrecto";
 include "html/funcionesPHP/verificarRegistro.php";
 
 if (isset($errorCampo)) {
@@ -55,7 +56,7 @@ echo htmlspecialchars($_SERVER['PHP_SELF']);
                 <a href="?ph=home"><img src="/Web/img/robot.png" id="robotRegistro"/></a>
                   <h2>Iniciar sesión</h2>
              <?php 
-             if (!empty($message)){
+             if ($loginFail){
                echo '<p>'.$message.'</p>';
              } 
              ?>

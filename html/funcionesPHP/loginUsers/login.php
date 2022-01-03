@@ -2,6 +2,7 @@
 
 include 'dateBase.php';
 
+
 if (!empty($_POST['email']) && !empty($_POST['passwd'])) {
 
     $records = $conn->prepare('SELECT * FROM tbl_usuaris WHERE email = :email');
@@ -25,12 +26,13 @@ if (!empty($_POST['email']) && !empty($_POST['passwd'])) {
             content="0; url=http://localhost/Web/index.php?ph=home">';
 
         }} else {
-        
-        echo '<meta http-equiv="refresh"
+            
+            echo '<meta http-equiv="refresh"
             content="0; url=http://localhost/Web/index.php?ph=E02-Formulario-registro">';
-            $message = 'Sorry, those credentials do not match';
-        echo $mensaje;
-
+            
+           //header("Location: /index.php?ph=E02-Formulario-registro");
+            $message = 'La contraseña o mail es incorrecta';
+            echo $mensaje;
 
  
 

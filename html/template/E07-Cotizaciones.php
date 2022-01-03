@@ -11,6 +11,16 @@ if (!isset($_SESSION['user_id'])){
    
 
 }
+else if ($user['status']== 0){
+
+    echo '<div id="alert-permisos">
+    <iframe src="https://giphy.com/embed/uIGfoVAK9iU1y" width="150" height="150" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <h2><a href="?ph=E02-Formulario-registro">Inicia sesión</a> con una cuenta verificada para ver el contenido</h2>
+          </div>';
+
+    die();
+
+}
 
 ?>
  <section id="generador-codigo-no-color">
